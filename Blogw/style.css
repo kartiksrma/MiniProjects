@@ -1,0 +1,141 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Index.html css Starts */
+.header{
+    padding: 1rem 3rem;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+}
+h1{
+    font-size: 2.15rem;
+    
+}
+.container{
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+    padding: 1rem;
+}
+.box{
+    border-radius: 5px;
+    padding: 20px;
+    border: 3px solid rgb(179, 179, 179);
+}
+.wrap{
+    margin-bottom: 3rem;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.category{
+    color: rgb(17, 124, 231);
+    font-weight: bolder;
+    margin: 10px 0px;
+}
+.title{
+    font-size: 2rem;
+}
+.descr{
+    margin-top: 10px;
+    color: rgb(99, 98, 98);
+    font-size: 1.5rem;
+}
+.link a, span{
+    color: dodgerblue;
+}
+/* Index.html css ends */
+
+/* Post.html css Starts */
+.blog{
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-template-rows: 1fr 30px;
+    grid-gap: 5rem;
+}
+.sidebar li{
+    list-style-type: none;
+    padding-left: 10px;
+}
+.text{
+    margin: 1rem 0;
+    font-size: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    gap: 1.5rem;
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 2rem;
+}
+.main-head #title{
+    font-size: 2.5rem;
+}
+.sub-head #title{
+    font-size: 2.25rem;
+}
+.sub-head-1 #title{
+    font-size: 1.75rem;
+}
+.main ul, ol{
+    padding: 0 3rem;
+}
+.bordered{
+    border: 1px solid grey;
+    padding: 10px;
+}
+#desc{
+    color: grey;
+}
+.sidebar div{
+    margin-bottom: 2rem;
+}
+.old{
+    border: 2px solid dodgerblue;
+    color: dodgerblue;
+}
+.new{
+    border: 2px solid grey;
+    color: grey;
+}
+.old, .new{
+    padding: 7px;
+    border-radius: 50px;
+}
+@media(max-width:550px){
+    .blog{
+        padding: 2rem;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 4fr 30px 1fr;
+        grid-gap: 5rem;
+        grid-template-areas: 
+        "main"
+        "nav"
+        "side";
+    }
+    .main{
+        grid-area: main;
+    }
+    .nav{
+        grid-area: nav;
+    }
+    .sidebar{
+        grid-area: side;
+    }
+}
